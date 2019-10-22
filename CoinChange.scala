@@ -1,4 +1,4 @@
-/*
+/**
 Given a value V, if we want to make change for V cents, 
 and we have infinite supply of each of C = { C1, C2, .. , Cm} valued coins, 
 what is the minimum number of coins to make the change? 
@@ -11,7 +11,7 @@ We can use three coin of 10 cents and one of 1 cents
 Input: coins[] = {9, 6, 5, 1}, V = 11
 Output: Minimum 2 coins required
 We can use one coin of 6 cents and 1 coin of 5 cents
-*/
+**/
 
 object ChangeCoin {
   def main(args: Array[String]): Unit = {
@@ -22,7 +22,7 @@ object ChangeCoin {
     //println(findMinCoinsRecursive(coinList, len, cents))
     println(findMinCoinsDP(coinList, len, cents))
     
-    /*
+    /**
     val cents = 31
     var coins = ArrayBuffer(1, 10, 25).sortWith(_ > _)
     var ans = new ListBuffer[(Int, Map[Int, Int])]()
@@ -32,7 +32,7 @@ object ChangeCoin {
     }
     val x = ans.sortWith(_._1 < _._1).head
     println(s"Mininum required coins is ${x._1} , and you need ${x._2.mkString(",")}")
-    */
+    **/
   }
 
   private def findMinCoinsRecursive(arr: Array[Int], n: Int, cents: Int): Int ={
