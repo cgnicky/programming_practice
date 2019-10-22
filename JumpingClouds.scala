@@ -1,6 +1,4 @@
-package application
-
-object Sample3 {
+object JumpingClouds {
   def main(args: Array[String]): Unit = {
     //Move step - Either 1 or 2
     //Avoid the array index which having a value as 1
