@@ -1,9 +1,4 @@
-package application
-
-import scala.collection.mutable
-import scala.util.control._
-
-object Sample5 {
+object AliceBobApplesCollection {
   def main(args: Array[String]): Unit = {
     val arr = Array(6, 1, 4 ,6, 3, 2, 7, 4)
     val k = 3
