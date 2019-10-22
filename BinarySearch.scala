@@ -1,6 +1,4 @@
-package scala
-
-object BinarySearch extends App {
+object BinarySearch {
   def main(args: Array[String]): Unit = {
     val arr = Array(1, 2, 3, 6, 7, 9)
 
