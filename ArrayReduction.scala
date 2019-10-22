@@ -1,11 +1,8 @@
-package application
-
-object Sample3 {
+object ArrayReduction {
   def main(args: Array[String]): Unit = {
     val arr = (1 to 5).toArray
 
     println(reductionCost(arr))
-
   }
 
   def reductionCost(num: Array[Int]): Int = {
@@ -26,6 +23,7 @@ object Sample3 {
     else num(0)
   }
 
+  //Just a recursive function
   def factorial(n: Int): Int = {
     if (n == 0) 1
     else n * factorial(n-1)
