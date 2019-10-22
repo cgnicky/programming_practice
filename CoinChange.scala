@@ -21,6 +21,18 @@ object ChangeCoin {
 
     //println(findMinCoinsRecursive(coinList, len, cents))
     println(findMinCoinsDP(coinList, len, cents))
+    
+    /*
+    val cents = 31
+    var coins = ArrayBuffer(1, 10, 25).sortWith(_ > _)
+    var ans = new ListBuffer[(Int, Map[Int, Int])]()
+    while (!coins.isEmpty) {
+      ans.+=(findMinCoinsNaive(coins, cents))
+      coins = coins.tail
+    }
+    val x = ans.sortWith(_._1 < _._1).head
+    println(s"Mininum required coins is ${x._1} , and you need ${x._2.mkString(",")}")
+    */
   }
 
   private def findMinCoinsRecursive(arr: Array[Int], n: Int, cents: Int): Int ={
@@ -57,5 +69,20 @@ object ChangeCoin {
       }
     }
     table(cents)
+  }
+  
+  //This method only works on descending order of coin list
+  private def findMinCoinsNaive(coinList: ArrayBuffer[Int], cents: Int): (Int, Map[Int, Int]) ={
+    var coinsNeeded = 0
+    var remainder = cents
+    val coins = Map[Int, Int]()
+    for (coin <- coinList) {
+      if ((remainder / coin) != 0) {
+        coinsNeeded += remainder / coin
+        remainder = remainder % coin
+        coins.+=(coin -> coinsNeeded)
+      }
+    }
+    (coinsNeeded, coins)
   }
 }
