@@ -1,14 +1,11 @@
 /**
-Given an array of positive integers. 
-All numbers occur even number of times except one number which occurs odd number of times. 
-Find the number in O(n) time & constant space.
+A non-empty zero-indexed array A consisting of N integers is given. 
+The array contains an odd number of elements, and each element of the array can be paired with another element that has the same value, 
+except for one element that is left unpaired.
 
-Examples:
-Input : arr = {1, 2, 3, 2, 3, 1, 3}
-Output : 3
-
-Input : arr = {5, 7, 2, 7, 5, 2, 5}
-Output : 5
+Example:
+Given Array[2, 5, 6, 2, 6, 5, 8]
+The answer is 8
 **/
 
 object OddOccurrence {
