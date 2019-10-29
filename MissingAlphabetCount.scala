@@ -1,6 +1,7 @@
 /**
 Find the count of missing 'a' in a given string. 
-There is expected to have 2 and not more than 3 char 'a' before and after the non-char 'a' alphabet
+There is expected to have 2 and not more than 3 char 'a' before and after the non-char 'a' alphabet.
+If there is more than 3 char 'a' in the string, 0 should be returned.
 Example:
 Given S = "aabaca", Answer is 2 as the expected string should be "aaba'a'ca'a'"
 **/
