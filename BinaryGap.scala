@@ -1,14 +1,15 @@
+/**
+Find out the longest sequence of zeros in binary form, which begin and end with 1
+Example:
+10000010 - Longest sequence is 5
+1000000 - Longest sequence is 0 since there is no closing 1
+10010001 - Longest sequence is 3 instead of 2
+ **/
+
 import scala.collection.mutable._
 
 object BinaryGap {
   def main(args: Array[String]): Unit = {
-    /**
-    Find out the longest sequence of zeros in binary form, which begin and end with 1
-    Example:
-    10000010 - Longest sequence is 5
-    1000000 - Longest sequence is 0 since there is no closing 1
-    10010001 - Longest sequence is 3 instead of 2
-    **/
     //println(toBinary(32))
     val n = 50
     val binary = n.toBinaryString
