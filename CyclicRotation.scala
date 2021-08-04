@@ -23,6 +23,12 @@ object CyclicRotation {
 
     solution(arr2, k).foreach(println)
   }
+  
+  @tailrec
+  def betterSolution(a: Array[Int], k: Int): Array[Int] ={
+    if (k == 0) a
+    else betterSolution(a.take(a.length - 1).+:(a.head), k - 1)
+  }
 
   def solution(a: Array[Int], k: Int): Array[Int] ={
     val n = a.length
