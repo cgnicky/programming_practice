@@ -6,10 +6,10 @@ object Solution {
     def twoSum(nums: Array[Int], target: Int): Array[Int] = {
         var hMap = Map.empty[Int, Int]
         
-        for(v <- nums) {
+        for((v, i) <- nums.zipWithIndex) {
             hMap.get(v) match {
-                case Some(r) => return Array(r, nums.indexOf(v))
-                case None => hMap += (target - v -> nums.indexOf(v))
+                case Some(r) => return Array(r, i)
+                case None => hMap += (target - v -> i)
             }
         }
         
